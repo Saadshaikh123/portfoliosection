@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+}
+
+#main-section >h1{
+    text-align: center;
+    font-size: 3.5em;
+    color: hotpink;
+    font-family: 'Calistoga', cursive;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 40px;
+    max-width: 600px;
+    position: relative;
+}
+#main-section >h1:before{
+    content: "";
+    display: block;
+    width: 180px;
+    height: 2px;
+    position: absolute;
+    background: #000;
+    top: 50%;
+    z-index: -2;
+}
+
+#main-section >h1:after{
+    content: "";
+    display: block;
+    width: 180px;
+    height: 2px;
+    position: absolute;
+    background: #000;
+    right: 0;
+    top: 50%;
+    z-index: -2;
+
+}
+
+span{
+    background: #fff;
+}
+.pera{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#portfolio{
+   display: grid !important;
+   grid-template-columns: auto auto auto auto !important;
+   margin: 40px 21%;
+}
+.portfolio-section {
+    position: relative;
+    width: 50%;
+}
+  
+.portfolio-section > img {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+  
+.overlay {
+    position: absolute;
+    top: 20;
+    bottom: 0;
+    left: 70;
+    right: -120;
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:#495052f2;
+}
+  
+.portfolio-section:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    background: -webkit-linear-gradient(#eee, pink, white, hotpink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    position: absolute;
+    top: 35%;
+    left: 55%;
+    font-family: 'Calistoga', cursive;
+    -webkit-transform: translate(-50%, -30%);
+}
+
+
+@media only screen and (max-width:768px){
+    #portfolio{
+            display: grid;
+            grid-column-start: auto;
+            grid-template-columns: auto auto !important;
+            column-gap: 20px;
+            grid-row-gap: 50px;
+
+     }
+     .overlay {
+        width: 180px;
+        height: 180px;
+     }
+     #main-section{
+         margin-inline-start: 50px;
+     }
+       
+.portfolio-section > img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;   
+}
+}
+
+@media(max-width: 320px){
+    #portfolio{
+        grid-template-columns: auto !important;
+
+    }
+    #main-section{
+        display: contents;
+    }
+    #main-section > h1{
+        margin-inline-start: 10px;
+    margin-inline-end: 10px;
+    font-size: x-large;
+    }
+}
